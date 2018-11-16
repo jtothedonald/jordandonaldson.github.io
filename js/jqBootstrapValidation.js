@@ -43,6 +43,7 @@
           }).toArray()
         );
 
+        /*
         $(uniqueForms).bind("submit", function(e) {
           var $form = $(this);
           var warningsFound = 0;
@@ -58,7 +59,7 @@
               $controlGroup.removeClass("warning").addClass("error");
               warningsFound++;
             }
-          });
+          });*/
 
           $inputs.trigger("validationLostFocus.validation");
 

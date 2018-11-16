@@ -11,4 +11,4 @@ form.addEventListener('submit', function(evt) {
   form.name.value = '';
   form.email.value = '';
   form.message.value = '';
-})
+});
