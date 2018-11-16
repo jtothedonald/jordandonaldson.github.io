@@ -20,12 +20,13 @@
 
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
-    <link href="stylesheet" rel="css/style.css">
+    <link href="css/style.css" rel="stylesheet">
 
   </head>
 
   <body>
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -63,7 +64,6 @@
             <div class="site-heading">
               <h1>Welcome to Smart Advocacy</h1>
               <span class="subheading">Legislation Made Easy</span>
-              <p class="lead">Legislation Made Easy</p>
             </div>
           </div>
         </div>
@@ -72,7 +72,6 @@
 
     <!-- Main Content -->
     <div class="container">
-        <button onclick="topFunction()"" id="myBtn" title="Go to top">Top</button>
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-preview">
@@ -176,6 +175,23 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCFj1zVPwzsJz3UIWETqCol6XQeswMxB3A",
+        authDomain: "jtothedonald-8b76f.firebaseapp.com",
+        databaseURL: "https://jtothedonald-8b76f.firebaseio.com",
+        projectId: "jtothedonald-8b76f",
+        storageBucket: "jtothedonald-8b76f.appspot.com",
+        messagingSenderId: "960821719980"
+      };
+      firebase.initializeApp(config);
+      var db = firebase.firestore();
+    </script>
+
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -192,12 +208,12 @@
       document.documentElement.scrollTop = 0;
       document.getElementsByClassName('lead')[0].style.color = "white";
       document.getElementsByClassName('lead')[0].style.fontSize = "3em";
-      document.getElementsByClassName('lead')[0].innerHTML = 'Thank you for
-      visiting';
+      document.getElementsByClassName('lead')[0].innerHTML = 'Thank you for visiting';
       }
       </script>
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
+    <script src="js/addData.js"></script>
 
   </body>
 
